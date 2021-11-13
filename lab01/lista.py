@@ -1,4 +1,3 @@
-
 class Node:
 
     def __init__(self, x):
@@ -14,12 +13,13 @@ class Lista:
         self.tail = None
 
     def append(self, node):
+
         """
         Método para inserir um elemento no final
-
         :param node:
         :return:
         """
+
         if self.init is None:
             self.init = node
             self.tail = node
@@ -27,15 +27,17 @@ class Lista:
 
         self.tail.next = node
         node.prev = self.tail
+        self.tail = node
 
 
     def add(self, node):
+
         """
         Inserir um elemento sempre no inicio da lista
-
         :param node:
         :return:
         """
+
         if self.init is None:
             self.init = node
             self.tail = node
@@ -61,4 +63,11 @@ if __name__ == '__main__':
     print(lista)
     lista.append(Node(x=5))
     lista.append(Node(x=19))
-    print(lista)
+
+    #teste com mais números
+    
+    lista.append(Node(x=666))
+    lista.append(Node(x=777))
+    print(lista)    
+
+    #guilherme catori salla 
